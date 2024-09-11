@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>طلب خدمة</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="/dist/output.css" rel="stylesheet">
+    <link rel="stylesheet" href="../webfonts/all.css">
+    <style>
+        .hover-underline-animation {
+            display: inline-block;
+            position: relative;
+            color: #d4af37; /* اللون الذهبي */
+        }
+        .hover-underline-animation::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #d4af37;
+            transform-origin: bottom right;
+            transition: transform 0.25s ease-out;
+        }
+        .hover-underline-animation:hover::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+
+   
+    </style>
+</head>
+<body class="bg-white text-amber-500">
+
+        <!-- الهيدر -->
+        <header class="bg-gray-900  fixed top-0 left-0 right-0 p-2 mt-2 rounded-xl w-11/12 m-auto" style="padding: 10px 20px;">
+            <div class="container mx-auto flex justify-between items-center ">
+               <a href="index.html"><img src="../imeg/images.jpeg" alt="" class="h-12"></a> 
+                <nav class="hidden md:flex space-x-4 gap-5 m-auto">
+                    <a href="index.html" class="hover-underline-animation text-lg ml-5 text-white">الرئيسية</a>
+                    <a href="#ser" class="hover-underline-animation text-lg text-white">خدماتنا</a>
+                    <a href="#sell" class="hover-underline-animation text-lg text-white">مميزاتنا</a>
+                    <a href="#about" class="hover-underline-animation text-lg text-white">من نحن</a>
+                    <a href="#contact" class="hover-underline-animation text-lg text-white">اتصل بنا</a>
+                </nav>
+                <div class="md:hidden">
+                    <button id="menu-toggle" class="text-gray-300 focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div id="mobile-menu" class="hidden md:hidden bg-gray-900">
+                <a href="index.html" class="block px-4 py-2 text-gray-300 hover:bg-gray-800 hover:text-gold">الرئيسية</a>
+                <a href="#services" class="block px-4 py-2 text-gray-300 hover:bg-gray-800 hover:text-gold">خدماتنا</a>
+                <a href="#projects" class="block px-4 py-2 text-gray-300 hover:bg-gray-800 hover:text-gold">مشاريعنا</a>
+                <a href="#about" class="block px-4 py-2 text-gray-300 hover:bg-gray-800 hover:text-gold">من نحن</a>
+                <a href="#contact" class="block px-4 py-2 text-gray-300 hover:bg-gray-900 hover:text-gold">اتصل بنا</a>
+            </div>
+        </header>
+    
+        <!-- سكربت القائمة المنسدلة -->
+        <script>
+            const menuToggle = document.getElementById('menu-toggle');
+            const mobileMenu = document.getElementById('mobile-menu');
+    
+            menuToggle.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        </script>
+
+    <div class="container mx-auto py-16 text-center mt-10">
+       <samp><h1 class="text-4xl font-bold mb-8 text-gold bg-slate-900 w-1/2 m-auto rounded-3xl">طلب خدمة</h1></samp> 
+        <form class="max-w-lg mx-auto bg-gray-900 p-6 rounded-lg">
+            <div class="mb-4">
+                <label for="service" class="block text-white mb-2">الخدمة المطلوبة</label>
+                <select id="service" class="w-full p-2 text-black bg-gray-200 rounded">
+                    <option value="">اختر خدمة</option>
+
+                    <option value="تصميم مواقع الويب">تصميم مواقع الويب</option>
+
+                    <option value="تصميم متاجر إلكترونية">تصميم متاجر إلكترونية</option>
+
+                    <option value="تطوير موقع ويب">تطوير موقع ويب</option>
+
+                    <option value="تطوير المتاجر الإلكترونية">تطوير المتاجر الإلكترونية</option>
+
+                    <option value="تحسين محركات البحث"> تحسين محركات البحث</option>
+
+                    <option value="  انشاء تصاميم شعارات">انشاء تصاميم شعارات</option>
+
+                    <option value="  انشاء سيرة ذاتية">  انشاء سيرة ذاتية</option>
+
+                    <option value="  تصميم حمله اعلانية">تصميم حملة اعلانية</option>
+
+
+                </select>
+            </div>
+            <div class="mb-4">
+                <label for="details" class="block text-white mb-2">التفاصيل</label>
+                <textarea id="details" class="w-full p-2 text-black bg-gray-200 rounded" rows="5" placeholder="أدخل التفاصيل"></textarea>
+            </div>
+            <button class="bg-amber-500 text-black font-bold py-2 px-4 rounded"><a href="https://wa.me/966546738878?text=مرحباً، أرغب في طلب خدمة."> اطلب الان</a></button>
+        </form>
+    </div>
+
+    <footer class="bg-gray-900 text-white py-10 mt-10">
+        <div class="container mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <!-- قسم الروابط الداخلية -->
+                <div class="mb-6 md:mb-0">
+                   <samp> <h3 class="text-black font-bold mb-4 bg-white rounded-sm">الصفحات</h3></samp>
+                    <ul>
+                       <li><a href="index.html" class="text-gray-400 hover:text-white">الرئيسية</a></li></button>
+                        <li><a href="#about" class="text-gray-400 hover:text-white">من نحن</a></li></button>
+                            <li><a href="#ser" class="text-gray-400 hover:text-white">الخدمات</a></li></button>
+                            <li><a href="#contact" class="text-gray-400 hover:text-white">اتصل بنا</a></li></button>
+                    </ul>
+                </div>
+
+                <!-- قسم الروابط الخارجية -->
+               
+
+                <!-- قسم أيقونات التواصل الاجتماعي -->
+                <div class="flex space-x-4">
+                    <a href="https://facebook.com" target="_blank" class="text-gray-400 hover:text-white ml-3">
+                        <i class="fab fa-facebook fa-2x"></i>
+                    </a>
+                    <a href="https://twitter.com" target="_blank" class="text-gray-400 hover:text-white">
+                        <i class="fab fa-twitter fa-2x"></i>
+                    </a>
+                    <a href="https://instagram.com" target="_blank" class="text-gray-400 hover:text-white">
+                        <i class="fab fa-instagram fa-2x"></i>
+                    </a>
+                    <a href="https://linkedin.com" target="_blank" class="text-gray-400 hover:text-white">
+                        <i class="fab fa-linkedin fa-2x"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- النص السفلي -->
+            <div class="text-center text-gray-400 mt-6">
+               <samp> <p>&copy; 2024 جميع الحقوق محفوظة.الحلم الرقمي</p></samp>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
