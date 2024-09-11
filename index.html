@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>موقع خدمات</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../webfonts/all.css">
+    <link href="/dist/output.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <style>
+        .hover-underline-animation {
+            display: inline-block;
+            position: relative;
+            color: #d4af37; /* اللون الذهبي */
+        }
+        .hover-underline-animation::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #d4af37;
+            transform-origin: bottom right;
+            transition: transform 0.25s ease-out;
+        }
+        .hover-underline-animation:hover::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+
+   
+    </style>
+</head>
+<body class=" text-black">
+
+     <!-- قسم Hero -->
+     <section class="py-16">
+        <div class="container mx-auto flex flex-col md:flex-row items-center justify-between ">
+            <!-- نصوص والعنوان -->
+            <div class="md:w-1/2 px-4 text-center md:text-left mt-20 ">
+                <h1 class="text-3xl md:text-5xl font-bold mb-4 text-gold bg-slate-900 rounded-2xl p-4 pl-32"> <samp class="text-amber-500 "> الحلم</samp> <samp class="text-white">الرقمي</samp> </h1>
+                <p class="text-lg md:text-2xl mb-8">
+                 <samp class="text-lg md:text-2xl mb-8 font-semibold ">نصمم مواقعك ومتاجرك الإلكترونية بشكل مخصص يعكس هوية علامتك التجارية ويجذب جمهورك المستهدف. نستخدم أحدث تقنيات التصميم لضمان تجربة مستخدم سلسة وجذابة</samp> 
+                </p>
+                <button class="bg-amber-500 rounded-lg  hover:bg-black hover:rounded-lg ml-10"><a href="tel:+966546738878" class="bg-gold text-black  hover:text-white font-bold py-2 px-4 rounded inline-block">اتصل بنا </a></button>
+            </div>
+            <!-- صورة -->
+            <div class="md:w-1/2 px-4">
+                <img src="../imeg/pngtree-ecommerce-website-with-shopping-cart-with-the-shopping-cart-on-a-image_2975658.jpg" alt="خدمة" class="w-full h-auto rounded-tr-full mt-16 shadow-2xl shadow-amber-500">
+            </div>
+        </div>
+    </section>
+
+    <!-- باقي الصفحة الرئيسية -->
+    
+    <!-- الهيدر -->
+    <header class= "bg-gray-900  fixed top-0 left-0 right-0 p-2 mt-2 rounded-xl w-11/12 m-auto z-10 shadow-amber-500 shadow-md " style="padding: 10px 20px;">
+        <div class="container mx-auto flex justify-between items-center ">
+           <a href="index.html"><img src="../imeg/images22.png" alt="" class="h-12"></a> 
+            <nav class="hidden md:flex space-x-4 gap-5 m-auto">
+               <samp><a href="index.html" class="hover-underline-animation text-lg ml-5 text-white">الرئيسية</a></samp>
+                <samp>  <a href="#ser" class="hover-underline-animation text-lg text-white">خدماتنا</a></samp> 
+                <samp>  <a href="#sell" class="hover-underline-animation text-lg text-white">مميزاتنا</a></samp>
+                    <samp>  <a href="#about" class="hover-underline-animation text-lg text-white">من نحن</a></samp>
+                        <samp>  <a href="#contact" class="hover-underline-animation text-lg text-white">اتصل بنا</a></samp>
+            </nav>
+           
+            <div class="md:hidden">
+                <button id="menu-toggle" class="text-gray-300 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-900">
+            <samp> <a href="index.html" class="block px-4 py-2 text-gray-300 hover:bg-gray-800 hover:text-gold">الرئيسية</a></samp>
+                <samp> <a href="#ser" class="block px-4 py-2 text-gray-300 hover:bg-gray-800 hover:text-gold">خدماتنا</a></samp>
+                    <samp> <a href="#sell" class="block px-4 py-2 text-gray-300 hover:bg-gray-800 hover:text-gold">مميزاتنا</a></samp>
+                        <samp> <a href="#about" class="block px-4 py-2 text-gray-300 hover:bg-gray-800 hover:text-gold">من نحن</a></samp>
+                            <samp><a href="#contact" class="block px-4 py-2 text-gray-300 hover:bg-gray-900 hover:text-gold">اتصل بنا</a></samp>
+        </div>
+    </header>
+
+    <!-- سكربت القائمة المنسدلة -->
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+
+<section id="services" class="py-16 bg-white text-black text-center">
+    <div class="container mx-auto">
+        <samp> <h2 class="text-3xl font-bold mb-8  bg-slate-900 text-amber-500 rounded-full">خدماتنا</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- خدمة 1 -->
+            <div class="bg-gray-900 p-6 rounded-lg hover:bg-slate-700 shadow-lg shadow-amber-500 " id="ser">
+                <img src="../imeg/مستقبل-المواقع-الإلكترونية (1).jpeg" alt="خدمة 1" class="w-full h-48 object-cover mb-4 rounded-lg">
+                <samp><h3 class="text-2xl font-bold mb-4 text-white">تصميم مواقع ويب </h3></samp>
+                <samp> <p class="text-white mb-4">وصف مختصر حول الخدمة.</p></samp>
+                <button class="bg-amber-500 rounded-lg ml-auto hover:bg-white hover:rounded-lg "><a href="index3.html" class="bg-gold text-black font-bold py-2 px-4 rounded hover:text-black">طلب خدمة</a></button>
+            </div>
+
+            <div class="bg-gray-900 p-6 rounded-lg hover:bg-slate-700 shadow-lg shadow-amber-500">
+                <img src="../imeg/17-19.jpg" alt="خدمة 1" class="w-full h-48 object-cover mb-4 rounded-lg">
+                <samp> <h3 class="text-2xl font-bold mb-4 text-white">تصميم متاجر الاكترونية</h3></samp>
+                    <samp><p class="text-white mb-4">وصف مختصر حول الخدمة.</p></samp>
+                <button class="bg-amber-500 rounded-lg ml-auto hover:bg-white hover:rounded-lg "><a href="index3.html" class="bg-gold text-black font-bold py-2 px-4 rounded hover:text-black">طلب خدمة</a></button>
+            </div>
+
+            <div class="bg-gray-900 p-6 rounded-lg hover:bg-slate-700 shadow-lg shadow-amber-500">
+                <img src="../imeg/1289572-web.webp" alt="خدمة 1" class="w-full h-48 object-cover mb-4 rounded-lg">
+                <samp>  <h3 class="text-2xl font-bold mb-4 text-white">تطوير المواقع</h3></samp>
+                    <samp>  <p class="text-white mb-4">وصف مختصر حول الخدمة.</p></samp>
+                <button class="bg-amber-500 rounded-lg ml-auto hover:bg-white hover:rounded-lg "><a href="index3.html" class="bg-gold text-black font-bold py-2 px-4 rounded hover:text-black">طلب خدمة</a></button>
+            </div>
+
+            <div class="bg-gray-900 p-6 rounded-lg hover:bg-slate-700 shadow-lg shadow-amber-500">
+                <img src="../imeg/إنشاء-متجر-إلكتروني-1-scaled-1.jpg" alt="خدمة 1" class="w-full h-48 object-cover mb-4 rounded-lg">
+                <samp><h3 class="text-2xl font-bold mb-4 text-white"> تطوير المتاجر</h3></samp>
+                <samp><p class="text-white mb-4">وصف مختصر حول الخدمة.</p></samp>
+                <button class="bg-amber-500 rounded-lg ml-auto hover:bg-white hover:rounded-lg "><a href="index3.html" class="bg-gold text-black font-bold py-2 px-4 rounded hover:text-black">طلب خدمة</a></button>
+            </div>
+
+            <div class="bg-gray-900 p-6 rounded-lg hover:bg-slate-700 shadow-lg shadow-amber-500">
+                <img src="../imeg/24.png" alt="خدمة 1" class="w-full h-48 object-cover mb-4 rounded-lg">
+                <samp>  <h3 class="text-2xl font-bold mb-4 text-white"> تحسين محركات البحث</h3></samp>
+                    <samp> <p class="text-white mb-4">وصف مختصر حول الخدمة.</p></samp>
+                <button class="bg-amber-500 rounded-lg ml-auto hover:bg-white hover:rounded-lg "><a href="index3.html" class="bg-gold text-black font-bold py-2 px-4 rounded hover:text-black">طلب خدمة</a></button>
+            </div>
+
+            <div class="bg-gray-900 p-6 rounded-lg hover:bg-slate-700 shadow-lg shadow-amber-500">
+                <img src="../imeg/How-To-Create-A-Brand-Logo.jpg" alt="خدمة 1" class="w-full h-48 object-cover mb-4 rounded-lg">
+                <samp> <h3 class="text-2xl font-bold mb-4 text-white"> انشاء تصمايم شعارات</h3></samp>
+                    <samp> <p class="text-white mb-4">وصف مختصر حول الخدمة.</p></samp>
+                <button class="bg-amber-500 rounded-lg ml-auto hover:bg-white hover:rounded-lg "><a href="index3.html" class="bg-gold text-black font-bold py-2 px-4 rounded hover:text-black">طلب خدمة</a></button>
+            </div>
+
+            <div class="bg-gray-900 p-6 rounded-lg hover:bg-slate-700 shadow-lg shadow-amber-500">
+                <img src="../imeg/طريقة-كتابة-السيرة-الذاتية-بالعربي.jpg" alt="خدمة 1" class="w-full h-48 object-cover mb-4 rounded-lg">
+                <samp>  <h3 class="text-2xl font-bold mb-4 text-white"> انشاء سيرة ذاتيه</h3></samp>
+                    <samp>  <p class="text-white mb-4">وصف مختصر حول الخدمة.</p></samp>
+                <button class="bg-amber-500 rounded-lg ml-auto hover:bg-white hover:rounded-lg "><a href="index3.html" class="bg-gold text-black font-bold py-2 px-4 rounded hover:text-black">طلب خدمة</a></button>
+            </div>
+
+
+            <div class="bg-gray-900 p-6 rounded-lg hover:bg-slate-700 shadow-lg shadow-amber-500">
+                <img src="../imeg/9-O.jpg" alt="خدمة 1" class="w-full h-48 object-cover mb-4 rounded-lg">
+                <samp> <h3 class="text-2xl font-bold mb-4 text-white"> تصميم حمله اعلانية </h3></samp>
+                    <samp> <p class="text-white mb-4">وصف مختصر حول الخدمة.</p></samp>
+                <button class="bg-amber-500 rounded-lg ml-auto hover:bg-white hover:rounded-lg "><a href="index3.html" class="bg-gold text-black font-bold py-2 px-4 rounded hover:text-black">طلب خدمة</a></button>
+            </div>
+            <!-- أضف المزيد من الخدمات (2، 3، 4) -->
+        </div>
+    </div>
+</section>
+<!-- ----------ممنيزاتنا -->
+<div class="container mx-auto" id="sell">
+    <!-- العنوان -->
+    <samp><h2 class="text-2xl font-bold mb-6 text-center bg-slate-900 text-amber-500 rounded-3xl">مميزات خدمتنا</h2></samp>
+    
+    <!-- الدفات الأربعة -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 ">
+        <!-- الدف الأول -->
+        <div class="bg-white text-black p-6 rounded-lg shadow-lg flex items-center hover:bg-slate-900  hover:,.p hover:text-white">
+            <!-- <img src="../imeg/24.png" alt="ميزة 1" class="w-12 h-12 mr-4"> -->
+            <span class="material-symbols-outlined text-4xl font-bold text-amber-500">
+                install_desktop
+                </span>
+           <samp><p class="text-lg mr-5 font-semibold"> تصميم مخصص وجذاب</p></samp> 
+        </div>
+        <!-- الدف الثاني -->
+        <div class="bg-white text-black p-6 rounded-lg shadow-lg flex items-center hover:bg-slate-900  hover:,.p hover:text-white">
+            <!-- <img src="https://via.placeholder.com/50" alt="ميزة 2" class="w-12 h-12 mr-4"> -->
+            <span class="material-symbols-outlined text-4xl font-bold text-amber-500">
+                sync_saved_locally
+                </span>
+                <samp><p class="text-lg mr-5 font-semibold"> استجابة كاملة لجميع الأجهزة </p></samp>
+        </div>
+        <!-- الدف الثالث -->
+        <div class="bg-white text-black p-6 rounded-lg shadow-lg flex items-center hover:bg-slate-900 hover:,.p hover:text-white">
+            <!-- <img src="https://via.placeholder.com/50" alt="ميزة 3" class="w-12 h-12 mr-4"> -->
+            <span class="material-symbols-outlined text-4xl font-bold text-amber-500">
+                multimodal_hand_eye
+                </span>
+                <samp> <p class="text-lg mr-5 font-semibold"> تحسين تجربة المستخدم</p></samp>
+        </div>
+        <!-- الدف الرابع -->
+        <div class="bg-white  text-black p-6 rounded-lg shadow-lg flex items-center hover:bg-slate-900 hover:,.p hover:text-white">
+            <!-- <img src="https://via.placeholder.com/50" alt="ميزة 4" class="w-12 h-12 mr-4"> -->
+            <span class="material-symbols-outlined text-4xl font-bold text-amber-500 ">
+                settings
+                </span>
+                <samp> <p class="text-lg mr-5 font-semibold">دعم فني وصيانة</p></samp>
+        </div>
+    </div>
+</div>
+<!-- abutus -->
+<section id="about" class="py-16 bg-white text-black">
+    <div class="container mx-auto flex flex-col md:flex-row items-center">
+        <div class="md:w-1/2">
+            <img src="../imeg/tech2017-07-28_194222.jpg" alt="About Us" class="w-full h-auto rounded-lg rounded-tl-full shadow-xl  shadow-amber-500">
+        </div>
+        <div class="md:w-1/2 mt-8 md:mt-0 md:ml-8">
+           <samp><h2 class="text-4xl font-bold  mb-4 mr-10 bg-slate-900 rounded-3xl text-amber-500 pr-10">عنا </h2></samp> 
+           <Samp class=" text-2xl font-semibold"><p class="text-black mr-10">
+            نقدم لك مجموعة من الخدمات المصممة لتلبية احتياجاتك الخاصة، بدءًا من تصميم مواقع إلكترونية حديثة وجذابة، وصولاً إلى تطوير متاجر إلكترونية توفر تجربة تسوق سلسة وآمنة. نحن ملتزمون بتقديم حلول متكاملة تساعدك على التميز في عالم الويب وتعزز من حضورك الرقمي.
+           </p></Samp> 
+        </div>
+    </div>
+</section>
+
+<!-- marktien -->
+<div class="container mx-auto w-full">
+   <samp> <h2 class="text-2xl font-bold mb-6 text-center bg-slate-900 text-white rounded-3xl">خدماتنا بالفيديو</h2></samp>
+
+    <!-- دف يحتوي على الفيديو -->
+    <div class="bg-slate-900 p-6 rounded-lg shadow-lg flex items-center justify-center z-0 w-full">
+        <video width="600" height="400" controls>
+            <source src="../vidoes/WhatsApp Video 2024-09-11 at 10.53.48 PM.mp4" type="video/mp4" class=" w-full">
+            <!-- في حالة عدم دعم المتصفح للفيديو -->
+            متصفحك لا يدعم تشغيل الفيديو.
+        </video>
+    </div>
+</div>
+<!-- hjjj -->
+
+<section id="contact" class="py-16 bg-slate-900 text-white text-center mt-20">
+    <div class="container mx-auto">
+        <h2 class="text-3xl font-bold mb-8 text-gold">اتصل بنا</h2>
+        <form class="max-w-lg mx-auto bg-gray-800 p-6 rounded-lg">
+            <div class="mb-4">
+                <label for="name" class="block text-white mb-2">الاسم</label>
+                <input type="text" id="name" class="w-full p-2 text-black" placeholder="الاسم">
+            </div>
+            <div class="mb-4">
+                <label for="email" class="block text-white mb-2">البريد الإلكتروني</label>
+                <input type="email" id="email" class="w-full p-2 text-black" placeholder="البريد الإلكتروني">
+            </div>
+            <div class="mb-4">
+                <label for="message" class="block text-white mb-2">الرسالة</label>
+                <textarea id="message" class="w-full p-2 text-black" rows="5" placeholder="الرسالة"></textarea>
+            </div>
+            <button class="bg-amber-500 text-black font-bold py-2 px-4 rounded">إرسال</button>
+        </form>
+    </div>
+</section>
+
+<!-- ------------- -->
+
+    <!-- الفوتر -->
+    <footer class="bg-gray-900 text-white py-10 mt-10">
+        <div class="container mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <!-- قسم الروابط الداخلية -->
+                <div class="mb-6 md:mb-0 md:w-1/2 w-full">
+                   <samp > <h3 class="text-black font-bold mb-4 bg-white rounded-sm">الصفحات</h3></samp>
+                    <ul>
+                       <li><a href="index.html" class="text-gray-400 hover:text-white">الرئيسية</a></li></button>
+                        <li><a href="#about" class="text-gray-400 hover:text-white">من نحن</a></li></button>
+                            <li><a href="#ser" class="text-gray-400 hover:text-white">الخدمات</a></li></button>
+                            <li><a href="#contact" class="text-gray-400 hover:text-white">اتصل بنا</a></li></button>
+                    </ul>
+                </div>
+
+                <!-- قسم الروابط الخارجية -->
+               
+
+                <!-- قسم أيقونات التواصل الاجتماعي -->
+                <div class="flex space-x-4">
+                    <a href="https://facebook.com" target="_blank" class="text-gray-400 hover:text-white ml-3">
+                        <i class="fab fa-facebook fa-2x"></i>
+                    </a>
+                    <a href="https://twitter.com" target="_blank" class="text-gray-400 hover:text-white">
+                        <i class="fab fa-twitter fa-2x"></i>
+                    </a>
+                    <a href="https://instagram.com" target="_blank" class="text-gray-400 hover:text-white">
+                        <i class="fab fa-instagram fa-2x"></i>
+                    </a>
+                    <a href="https://linkedin.com" target="_blank" class="text-gray-400 hover:text-white">
+                        <i class="fab fa-linkedin fa-2x"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- النص السفلي -->
+            <div class="text-center text-gray-400 mt-6">
+               <samp> <p>&copy; 2024 جميع الحقوق محفوظة.الحلم الرقمي</p></samp>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+</html>
